@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王三少的小家庭</title>
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- 或者使用 PNG 格式 -->
+    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+    
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">王三少的小家庭</div>
+        <div class="nav-links">
+            <a href="#home" class="active">首页</a>
+            <a href="#about">关于我</a>
+            <a href="#portfolio">作品集</a>
+            <button class="ai-toggle" onclick="toggleAI()">
+                <i class="fas fa-robot"></i> AI助手
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero" id="home">
+        <div class="carousel">
+            <!-- 轮播图片将通过JS动态添加 -->
+        </div>
+        <div class="hero-content">
+            <h1>你好！欢迎来到王三少的小家庭</h1>
+            <p>记录美好生活的每一刻</p>
+        </div>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>编程开发</h3>
+                    <p>精通多种编程语言和开发工具</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>创意设计</h3>
+                    <p>擅长UI/UX设计和创意思维</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>项目管理</h3>
+                    <p>丰富的项目管理和团队协作经验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集 -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>作品集</h2>
+            <div class="portfolio-grid">
+                <!-- 作品展示将在这里添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="social-links">
+            <a href="#" title="微信" onclick="toggleWechatQR(event)"><i class="fab fa-weixin"></i></a>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAcPbK4li0MN_vtEfHTpr3SUBYHNQwEozP1SN1kZ2XZ_4" title="抖音" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2024 王三少的小家庭. All rights reserved.</p>
+    </footer>
+
+    <!-- AI助手对话界面 -->
+    <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+            <h3>AI助手</h3>
+            <div class="chat-controls">
+                <button onclick="minimizeChat()"><i class="fas fa-minus"></i></button>
+                <button onclick="toggleFullscreen()"><i class="fas fa-expand"></i></button>
+                <button onclick="closeChat()"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="chat-messages"></div>
+        <div class="chat-input">
+            <textarea placeholder="输入消息..." onkeydown="handleKeyPress(event)"></textarea>
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- 添加微信二维码弹窗 -->
+    <div class="wechat-qr" id="wechatQR">
+        <img src="erweima/weixin.jpg" alt="微信二维码">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
